@@ -9,8 +9,8 @@
   },
   "dependencies": {
     "core-js": "^3.8.3",
+    "gsap": "^3.11.3",
     "vue": "^3.2.45"
-    "gsap": "^3.11.3"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",

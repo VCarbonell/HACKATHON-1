@@ -1,4 +1,4 @@
-const flag = document.querySelector('.flag');
+const obstacle = document.querySelector('.obstacle');
 const vehicule = document.querySelector('.vehicule');
 
 const getAllSquare = (myPos) => {
@@ -13,10 +13,13 @@ const getAllSquare = (myPos) => {
 
 const collisionTest = (obstacle, vehicule) => {
   if ((vehicule.top >= obstacle.top && vehicule.top <= obstacle.bottom) ||
-       (vehicule.bottom <= obstacle.bottom && vehicule.bottom >= obstacle.top)) {
+       (vehicule.bottom <= obstacle.bottom && vehicule.bottom >= obstacle.top) ||
+       (vehicule.top <= obstacle.top && vehicule.bottom >= obstacle.bottom)) {
     if (vehicule.right >= obstacle.left && vehicule.right <= obstacle.right) {
       return false;
     } else if (vehicule.left >= obstacle.left && vehicule.left <= obstacle.right) {
+      return false;
+    } else if (vehicule.left <= obstacle.left && vehicule.right >= obstacle.right) {
       return false;
     }
   }
@@ -24,10 +27,10 @@ const collisionTest = (obstacle, vehicule) => {
 } 
 
 export const getCollision = () => {
-  const flagPos = flag.getBoundingClientRect();
+  const obstaclePos = obstacle.getBoundingClientRect();
   const vehiculePos = vehicule.getBoundingClientRect();
-  const flagSquare = getAllSquare(flagPos);
+  const obstacleSquare = getAllSquare(obstaclePos);
   const vehiculeSquare = getAllSquare(vehiculePos);
-  const collision = collisionTest(flagSquare, vehiculeSquare);
+  const collision = collisionTest(obstacleSquare, vehiculeSquare);
   return collision;
 };

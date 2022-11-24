@@ -1,6 +1,6 @@
 import { getCollision } from "@/collision.js";
 
-const vehicule = document.querySelector('#vehicule');
+const vehicule = document.querySelector('.vehicule');
 const screenWidth = screen.width;
 const screenHeight = screen.height;
 
@@ -11,13 +11,6 @@ window.addEventListener('load', () => {
   vehicule.style.left = 0;
   vehicule.style.bottom = 0;
 });
-
-const Arrows = {
-  up: false,
-  down: false,
-  left: false,
-  right: false,
-}
 
 window.addEventListener('keydown', (e) => {
   switch(true) {
