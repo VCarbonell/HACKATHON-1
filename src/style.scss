@@ -66,25 +66,23 @@ body{
 
 .obstacle {
 	position: absolute;
-	width: 100px;
+	width: 250px;
   color: white;
   z-index: 100;
-  transform: translate3d(0,0);
 	background-size: contain;
 	background-repeat: no-repeat;
-	left: 50000px;
 }
 
 .obstacle3 {
-	height: 65px;
+	height: 150px;
 }
 
 .obstacle2 {
-	height: 70px;
+	height: 170px;
 }
 
 .obstacle1 {
-	height: 80px;
+	height: 200px;
 }
 
 
