@@ -1,3 +1,5 @@
+import { getCollision } from "@/collision.js";
+
 const vehicule = document.querySelector('#vehicule');
 const screenWidth = screen.width;
 const screenHeight = screen.height;
@@ -9,6 +11,14 @@ window.addEventListener('load', () => {
   vehicule.style.left = 0;
   vehicule.style.bottom = 0;
 });
+
+const Arrows = {
+  up: false,
+  down: false,
+  left: false,
+  right: false,
+}
+
 window.addEventListener('keydown', (e) => {
   switch(true) {
     case e.key === 'ArrowLeft' && vehicule.style.left !== "0px":
@@ -25,5 +35,10 @@ window.addEventListener('keydown', (e) => {
       break;    
     default:
       console.log("Let's go!!!");
+  }
+  const collision = getCollision();
+  if (collision === false) {
+    vehicule.style.left = 0;
+    vehicule.style.bottom = 0;
   }
 });

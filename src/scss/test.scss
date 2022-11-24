@@ -10,11 +10,16 @@
   }
 }
 
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
 
 .flag {
   animation: move 4s infinite;
   border: 1px solid black;
-  height: 50px;
-  width: 50px;
-  margin: auto;
+  height: 100px;
+  width: 100px;
 }
