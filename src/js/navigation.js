@@ -1,5 +1,4 @@
-const navigation = () => {
-const vehicule = document.querySelector('#vehicule');
+const vehicule = document.querySelector('.vehicule__active');
 const windowWidth = window.innerWidth;
 const windowHeight = window.innerHeight;
 
@@ -52,6 +51,8 @@ window.addEventListener('keydown', (e) => {
 document.addEventListener('keyup', (e) => {
     delete keysPressed[e.key];
  });
+
+const change = () => {
+console.log("coucou");
 };
 
-export default navigation;

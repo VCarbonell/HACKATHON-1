@@ -1,4 +1,2 @@
 import './style.scss';
-import navigation from "./js/navigation";
-
-navigation();
+import './js/navigation.js';
