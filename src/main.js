@@ -1,6 +1,7 @@
 import { gsap } from "gsap";
 import './style.scss';
-import './js/navigation.js';
+import './obstacle.js'
+import './collision.js';
 import navigation from "./js/navigation";
 import './collision.js';
 
@@ -15,9 +16,7 @@ const bgTl = gsap.timeline();
    yoyo:true
  })
 const play = () => {
-  bgTl.paused( !bgTl.paused());
-playBtn.innerHTML = bgTl.paused() ? 'Start' : 'Pause'
-
+  playBtn.style.display = "none";
   bgTl.to('.game', {
     x:'-90%',
     duration:80,
