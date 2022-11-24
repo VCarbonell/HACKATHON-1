@@ -1,3 +1,4 @@
 import './style.scss';
+import navigation from "./js/navigation";
 
-window.resizeTo(500,500);
+navigation();
