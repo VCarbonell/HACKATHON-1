@@ -1,5 +1,6 @@
 const allObstacle = document.querySelectorAll('.obstacle');
 const vehicule = document.querySelector('.vehicule');
+console.log(vehicule)
 
 const getAllSquare = (myPos) => {
   const allSquareX = {
