@@ -63,41 +63,84 @@ table {
 body{
   overflow: hidden;
 
-
-
-.obstacle{
-
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  top: 20rem;
-  right: -100px;
-  width: 100px;
-  height: 100px;
-  background-color: blue;
-  color: white;
-  z-index: 100;
-  transform: translate3d(0,0);
 }
-.obstacle2{
-  position: absolute;
+
+
+.drapeaux__container{
+  position: relative;
+  top: 2rem;
+  right: -90%;
+  width: 250vw ;
+  height: 100vh;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  right: -100px;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10rem;
+  transform: translate3d(0,0); 
+}
+.drapeaux1{
+  position: relative;
   width: 100px;
   height: 100px;
-  background-color: blue;
-  color: white;
-  z-index: 100;
-  transform: translate3d(0,0);
-  top: 30rem;
+  background-size: cover;
+  z-index: 300;
+  align-self: flex-end;
+  background-image: url('src/images/mexicoDrapeaux.png');
+  background-size: contain;
+
+}
+.drapeaux2{
+  position: relative;
+  width: 100px;
+  height: 100px;
+  align-self: flex-end;
+  background-image: url('src/images/nigerDrapeaux.png');
+  background-size: contain;
+  z-index: 300;
+}
+.monumentA{
+  position: absolute;
+  bottom: 6rem;
+  left: 0;
+  width: 300px;
+  height: 300px;
+  background-image: url('src/images/mexiqueMonument.png');
+  background-size: cover;
+  background-position: center;
+  z-index: 300;
+
+}
+.monumentB{
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background-image: url('src/images/mexiqueMonument2.png');
+  background-size: cover;
+  background-position: center;
+  align-self: flex-start;
+  bottom: 5rem;
+  left: 50%;
+  z-index: 300;
+
+}
+.monumentC{
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background-image: url('src/images/mexiqueMonument3.png.png');
+  background-size: cover;
+  background-position: center;
+  align-self: flex-start;
+  z-index: 300;
+  bottom: 6rem;
+  right: 25%;
+
 }
 
 .game{
   position: absolute;
   width: auto;
+  height: 100vh;
   display: flex;
   flex-flow: row nowrap;
   transform: translate3d(0, 0);
@@ -118,5 +161,4 @@ body{
   background: rgb(255, 226, 226);
   z-index: 200;
   opacity: 0;
-}
 }

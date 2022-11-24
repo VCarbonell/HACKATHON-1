@@ -18,43 +18,44 @@ const play = () => {
   bgTl.paused( !bgTl.paused());
 playBtn.innerHTML = bgTl.paused() ? 'Start' : 'Pause'
 
-  bgTl.to('.levelOne', {
-    x:'-20%',
-    duration:20,
+  bgTl.to('.game', {
+    x:'-6%',
+    duration:10,
     delay:1,
     ease:'linear',
 
   })
-  .to('.levelOne', {
-    x:'-40%',
+  .to('.drapeaux__container', {
+    x: -window.innerWidth * 5,
+    delay:0,
+    duration: 10,
+    ease: 'linear'
+  }, '>')
+  .to('.game', {
+    x:'-6%',
     duration:10,
     ease:'linear',
-
-  })
-.to('.obstacle, .obstacle2', {
-  x:'-2000px',
-  duration:4
-}, 3)
-.to('.levelOne', {
-  x:'-60%',
-  duration:8,
+  },'<')
+  .to('.game', {
+  x:'-15%',
+  delay:0,
+  duration:15,
+  ease:'linear',
+}, '<')
+.to('.game', {
+  x:'-35%',
+  duration:15,
   ease:'linear',
 
-})
-.to('.levelOne', {
-  x:'-80%',
-  duration:8,
-  ease:'linear',
-
-})
-.to('.levelOne', {
-  x:'-95%',
-  duration:8,
+}, '<')
+.to('.game', {
+  x:'-45%',
+  duration:15,
   ease:'linear',
   
 
 
-})
+}, '<')
 .to('.congrats',{
   opacity:0.5,
   onComplete : () =>{
