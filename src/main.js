@@ -16,9 +16,6 @@ const bgTl = gsap.timeline();
    yoyo:true
  })
 const play = () => {
-  bgTl.paused( !bgTl.paused());
-playBtn.innerHTML = bgTl.paused() ? 'Start' : 'Pause'
-
   bgTl.to('.game', {
     x:'-90%',
     duration:80,
