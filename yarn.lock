@@ -1836,6 +1836,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"gsap@npm:^3.11.3":
+  version: 3.11.3
+  resolution: "gsap@npm:3.11.3"
+  checksum: b97d33ca1fa28dc3b4ce957fa49226f6dcdea39eddd4ffaf4af2b9fe681ff974731bdb8717e50110842267187064659e2f7874c6d1936de4162f8c7721c09676
+  languageName: node
+  linkType: hard
+
 "hard-rejection@npm:^2.1.0":
   version: 2.1.0
   resolution: "hard-rejection@npm:2.1.0"
@@ -3831,6 +3838,7 @@ __metadata:
     core-js: ^3.8.3
     eslint: ^8.17.0
     eslint-plugin-vue: ^9.1.0
+    gsap: ^3.11.3
     postcss: ^8.4.14
     postcss-html: ^1.4.1
     sass: ^1.52.2
