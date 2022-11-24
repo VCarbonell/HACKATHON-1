@@ -50,7 +50,7 @@ window.addEventListener('keydown', (e) => {
       console.log("Let's go!!!");
   }
   const collision = getCollision();
-  if (collision === false) {
+  if (collision === true) {
     vehicule.style.left = 0;
     vehicule.style.bottom = 0;
   }

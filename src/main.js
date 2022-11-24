@@ -1,5 +1,6 @@
 import { gsap } from "gsap";
 import './style.scss';
+import './obstacle.js'
 import './collision.js';
 import navigation from "./js/navigation";
 

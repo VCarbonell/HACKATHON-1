@@ -67,15 +67,27 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
-  top: 20rem;
-  right: -100px;
   width: 100px;
   height: 100px;
-  background-color: blue;
   color: white;
   z-index: 100;
   transform: translate3d(0,0);
+	background-size: contain;
+	background-repeat: no-repeat;
 }
+
+.obstacle3 {
+	height: 65px;
+}
+
+.obstacle2 {
+	height: 70px;
+}
+
+.obstacle1 {
+	height: 80px;
+}
+
 .levelTwo{
   filter: blur(10px);
 }
