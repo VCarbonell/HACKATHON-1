@@ -1,5 +1,6 @@
 import { defineConfig } from 'vite';
 import path from 'path';
+import vue from '@vitejs/plugin-vue'
 
 var pathSrc = path.resolve(__dirname, "./src");
 
@@ -23,4 +24,10 @@ export default defineConfig({
       '@': pathSrc,
     },
   },
+  plugins: [vue()],
+  server: {
+    watch: {
+      usePolling: true,
+    }
+  }
 });

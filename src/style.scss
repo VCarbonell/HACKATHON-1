@@ -1,6 +1,8 @@
 @import 'scss/variables';
 @import 'scss/btn';
 @import 'scss/test.css';
+@import 'scss/test.scss';
+@import 'scss/navigation.scss';
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -29,6 +31,8 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+  height: 100vh;
+  width: 100vw;
 }
 ol, ul {
 	list-style: none;
@@ -56,11 +60,13 @@ table {
   cursor: pointer;
 }
 
-// body{
-//   overflow: hidden;
+body{
+  overflow: hidden;
 
-// }
-.obstacle {
+
+
+.obstacle{
+
   position: absolute;
   display: flex;
   justify-content: center;
@@ -96,17 +102,13 @@ table {
   flex-flow: row nowrap;
   transform: translate3d(0, 0);
   &__sprite{
-    position: absolute;
-    top: 30%;
-    left: 30%;
-    transform: translate(-50%, -50%);
+		// border: 1px solid black;
     width: 300px;
-    height: 300px;
+    height: 150px;
     z-index: 200;
     background-image: url('./src/images/pngegg (21).png');
     background-position: center;
     background-size: cover;
-    transform: scaleX(-1)
   }
 }
 .congrats{
@@ -116,4 +118,5 @@ table {
   background: rgb(255, 226, 226);
   z-index: 200;
   opacity: 0;
+}
 }

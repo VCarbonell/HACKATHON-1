@@ -1,0 +1,25 @@
+@keyframes move {
+  0%{
+    transform: translate(-200px);
+  }
+  50% {
+    transform: translate(200px);
+  }
+  100% {
+    transform: translate(-200px);
+  }
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.flag {
+  animation: move 4s infinite;
+  border: 1px solid black;
+  height: 100px;
+  width: 100px;
+}
