@@ -1,7 +1,6 @@
 @import 'scss/variables';
 @import 'scss/btn';
 @import 'scss/test.css';
-@import 'scss/test.scss';
 @import 'scss/navigation.scss';
 
 html, body, div, span, applet, object, iframe,
@@ -60,18 +59,20 @@ table {
 }
 
 body{
-  overflow: hidden;
+  overflow: scroll;
 
 }
 
 
 .obstacle {
+	position: absolute;
 	width: 100px;
   color: white;
   z-index: 100;
   transform: translate3d(0,0);
 	background-size: contain;
 	background-repeat: no-repeat;
+	left: 50000px;
 }
 
 .obstacle3 {
