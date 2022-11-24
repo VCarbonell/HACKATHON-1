@@ -15,6 +15,7 @@ const bgTl = gsap.timeline();
    yoyo:true
  })
 const play = () => {
+  playBtn.style.display = "none";
   bgTl.to('.game', {
     x:'-90%',
     duration:80,

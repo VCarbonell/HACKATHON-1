@@ -4,6 +4,8 @@ import { changeVeh } from "./changeVeh";
 const navigation = () => {
 const vehicule = document.querySelector('.vehicule__active');
 const sprite = document.querySelector('.game__sprite');
+const vies = document.querySelector('.vies');
+const gameover = document.querySelector('.gameover');
 const windowWidth = window.innerWidth;
 const windowHeight = window.innerHeight;
 
@@ -12,10 +14,11 @@ let moveBy = 30;
 window.addEventListener('load', () => {
   vehicule.style.position = 'absolute';
   vehicule.style.left = "0px";
-  vehicule.style.bottom = "250px";
+  vehicule.style.bottom = "350px";
 });
 
 let keysPressed = {};
+let number = 5;
 
 window.addEventListener('keydown', (e) => {
   keysPressed[e.key] = true;
@@ -63,7 +66,14 @@ window.addEventListener('keydown', (e) => {
   if (collision === false) {
     vehicule.style.left = 0;
     vehicule.style.bottom = 0;
+    if (number > 0) {
+      number = number - 1;
+      vies.style.backgroundImage = `url('./src/images/${number}vies.png')`;
+    } else {
+      gameover.style.display = "block";
+    }
   };
+
   const { change2, change3, change4, change5, change6 } = changeVeh();
   if (change2 === true) {
     vehicule.style.backgroundImage = "url('./src/images/montgolfiere.png')";

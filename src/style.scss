@@ -30,7 +30,6 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
-	line-height: 1;
   height: 100vh;
   width: 100vw;
 }
@@ -52,12 +51,57 @@ table {
 
 // BIG FAT RESET ABOVE
 .playBtn{
-  position: fixed;
-  top: 10%;
-  left: 10%;
-  transform: translate(-10%, -10%);
-  z-index: 100;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  margin: 0 auto;
+  z-index: 300;
+  width: auto;
+  height: auto;
+  background-color: transparent;
+  border: 0px;
+  transition: all 0.2s linear;
+}
+
+.playBtn:hover {
   cursor: pointer;
+}
+
+.playBtn img {
+  width: 330px;
+}
+
+.vies {
+  position: absolute;
+  margin: 0;
+  width: 320px;
+  height: 160px;
+  right: 20px;
+  top: -30px;
+  z-index: 200;
+  background-position: center;
+  background-size: cover;
+}
+
+.gameover {
+    display: none;
+    background-image: url('./images/gameover.png');
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+    z-index: 400;
+    width: 700px;
+    height: 400px;
+    background-color: transparent;
+    border: 0px;
+    transition: all 0.2s linear;
+    background-size: cover;
+    background-position: center;
 }
 
 body{
@@ -65,18 +109,16 @@ body{
 }
 .obstacle{
   position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  top: 20rem;
-  right: -100px;
+  width: 100px;
+  height: 100px;
+  top: 500px;
+  left: 500px;
   width: 100px;
   height: 100px;
   background-color: blue;
-  color: white;
   z-index: 100;
-  transform: translate3d(0,0);
 }
+
 .levelTwo{
   filter: blur(10px);
 }
