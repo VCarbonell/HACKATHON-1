@@ -59,155 +59,13 @@ table {
   cursor: pointer;
 }
 
-body{
-  overflow: hidden;
+// body{
+//   overflow: hidden;
 
-}
+// }
 
-
-.drapeaux__container{
-  position: relative;
-  top: 2rem;
-  right: -100%;
-  width: 400vw ;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 10rem;
-  transform: translate3d(0,0); 
-}
-.drapeaux1{
-  position: relative;
-  width: 100px;
-  height: 100px;
-  background-size: cover;
-  z-index: 300;
-  align-self: flex-end;
-  background-image: url('src/images/mexicoDrapeaux.png');
-  background-size: contain;
-
-}
-.drapeaux2{
-  position: relative;
-  width: 100px;
-  height: 100px;
-  align-self: flex-end;
-  background-image: url('src/images/nigerDrapeaux.png');
-  background-size: contain;
-  z-index: 300;
-}
-.monumentA{
-  position: absolute;
-  bottom: 6rem;
-  left: 0;
-  width: 300px;
-  height: 300px;
-  background-image: url('src/images/mexiqueMonument.png');
-  background-size: cover;
-  background-position: center;
-  z-index: 300;
-
-}
-.monumentB{
-  position: absolute;
-  width: 300px;
-  height: 300px;
-  background-image: url('src/images/mexiqueMonument2.png');
-  background-size: cover;
-  background-position: center;
-  align-self: flex-start;
-  bottom: 5rem;
-  left: 50%;
-  z-index: 300;
-
-}
-.monumentC{
-  position: absolute;
-  width: 300px;
-  height: 300px;
-  background-image: url('src/images/mexiqueMonument3.png.png');
-  background-size: cover;
-  background-position: center;
-  align-self: flex-start;
-  z-index: 300;
-  bottom: 6rem;
-  right: 25%;
-
-}
-
-.drapeaux__container2{
-  position: relative;
-  top: 2rem;
-  right: -100%;
-  width: 400vw ;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 10rem;
-  transform: translate3d(0,0); 
-}
-.drapeaux1{
-  position: relative;
-  width: 100px;
-  height: 100px;
-  background-size: cover;
-  z-index: 300;
-  align-self: flex-end;
-  background-image: url('src/images/mexicoDrapeaux.png');
-  background-size: contain;
-
-}
-.drapeaux2{
-  position: relative;
-  width: 100px;
-  height: 100px;
-  align-self: flex-end;
-  background-image: url('src/images/nigerDrapeaux.png');
-  background-size: contain;
-  z-index: 300;
-}
-.monumentA{
-  position: absolute;
-  bottom: 6rem;
-  left: 0;
-  width: 300px;
-  height: 300px;
-  background-image: url('src/images/mexiqueMonument.png');
-  background-size: cover;
-  background-position: center;
-  z-index: 300;
-
-}
-.monumentB{
-  position: absolute;
-  width: 300px;
-  height: 300px;
-  background-image: url('src/images/mexiqueMonument2.png');
-  background-size: cover;
-  background-position: center;
-  align-self: flex-start;
-  bottom: 5rem;
-  left: 50%;
-  z-index: 300;
-
-}
-.monumentC{
-  position: absolute;
-  width: 300px;
-  height: 300px;
-  background-image: url('src/images/mexiqueMonument3.png.png');
-  background-size: cover;
-  background-position: center;
-  align-self: flex-start;
-  z-index: 300;
-  bottom: 6rem;
-  right: 25%;
-
-}
 .game{
-  position: absolute;
+  position: relative;
   width: auto;
   height: 100vh;
   display: flex;
@@ -223,6 +81,369 @@ body{
     background-size: cover;
   }
 }
+
+// .drapeaux__container{
+//   position: relative;
+//   top: 2rem;
+//   left: 0;
+//   width: 90vw ;
+//   height: 90vh;
+//   display: flex;
+//   flex-direction: column;
+//   align-items: flex-end;
+//   gap: 10rem;
+//   transform: translate3d(0,0); 
+//   z-index: 200;
+//   border: 1px solid red;
+// }
+// .drapeaux1{
+//   position: relative;
+//   width: 100px;
+//   height: 100px;
+//   background-size: cover;
+//   z-index: 300;
+//   align-self: flex-end;
+//   background-image: url('src/images/mexicoDrapeaux.png');
+//   background-size: contain;
+
+// }
+// .drapeaux2{
+//   position: relative;
+//   width: 100px;
+//   height: 100px;
+//   align-self: flex-end;
+//   background-image: url('src/images/nigerDrapeaux.png');
+//   background-size: contain;
+//   z-index: 300;
+// }
+// .monumentA{
+//   position: absolute;
+//   bottom: 6rem;
+//   left: 0;
+//   width: 300px;
+//   height: 300px;
+//   background-image: url('src/images/mexiqueMonument.png');
+//   background-size: cover;
+//   background-position: center;
+//   z-index: 300;
+
+// }
+// .monumentB{
+//   position: absolute;
+//   width: 300px;
+//   height: 300px;
+//   background-image: url('src/images/mexiqueMonument2.png');
+//   background-size: cover;
+//   background-position: center;
+//   align-self: flex-start;
+//   bottom: 5rem;
+//   left: 50%;
+//   z-index: 300;
+
+// }
+// .monumentC{
+//   position: absolute;
+//   width: 300px;
+//   height: 300px;
+//   background-image: url('src/images/mexiqueMonument3.png.png');
+//   background-size: cover;
+//   background-position: center;
+//   align-self: flex-start;
+//   z-index: 300;
+//   bottom: 6rem;
+//   right: 25%;
+
+// }
+
+// .drapeaux__container2{
+//   position: absolute;
+//   top: 2rem;
+//   right: 4500px;
+//   width: 400vw ;
+//   height: 100vh;
+//   display: flex;
+//   flex-direction: column;
+//   align-items: flex-end;
+//   gap: 10rem;
+//   transform: translate3d(0,0); 
+// }
+// .drapeaux1{
+//   position: relative;
+//   width: 100px;
+//   height: 100px;
+//   background-size: cover;
+//   z-index: 300;
+//   align-self: flex-end;
+//   background-image: url('src/images/USADrapeaux.png');
+//   background-size: contain;
+
+// }
+// .drapeaux2{
+//   position: relative;
+//   width: 100px;
+//   height: 100px;
+//   align-self: flex-end;
+//   background-image: url('src/images/nigerDrapeaux.png');
+//   background-size: contain;
+//   z-index: 300;
+// }
+// .monumentA{
+//   position: absolute;
+//   bottom: 6rem;
+//   left: 0;
+//   width: 300px;
+//   height: 300px;
+//   background-image: url('src/images/egypteMonument.png');
+//   background-size: cover;
+//   background-position: center;
+//   z-index: 300;
+
+// }
+// .monumentB{
+//   position: absolute;
+//   width: 300px;
+//   height: 300px;
+//   background-image: url('src/images/egypteMonument2.png');
+//   background-size: cover;
+//   background-position: center;
+//   align-self: flex-start;
+//   bottom: 5rem;
+//   left: 50%;
+//   z-index: 300;
+
+// }
+// .monumentC{
+//   position: absolute;
+//   width: 300px;
+//   height: 300px;
+//   background-image: url('src/images/egypteMonument3.png');
+//   background-size: cover;
+//   background-position: center;
+//   align-self: flex-start;
+//   z-index: 300;
+//   bottom: 6rem;
+//   right: 25%;
+
+// }
+
+
+// .drapeaux__container3{
+//   position: absolute;
+//   top: 2rem;
+//   right: 8000px;
+//   width: 400vw ;
+//   height: 100vh;
+//   display: flex;
+//   flex-direction: column;
+//   align-items: flex-end;
+//   gap: 10rem;
+//   transform: translate3d(0,0); 
+// }
+// .drapeaux1{
+//   position: relative;
+//   width: 100px;
+//   height: 100px;
+//   background-size: cover;
+//   z-index: 300;
+//   align-self: flex-end;
+//   background-image: url('src/images/mexicoDrapeaux.png');
+//   background-size: contain;
+
+// }
+// .drapeaux2{
+//   position: relative;
+//   width: 100px;
+//   height: 100px;
+//   align-self: flex-end;
+//   background-image: url('src/images/nigerDrapeaux.png');
+//   background-size: contain;
+//   z-index: 300;
+// }
+// .monumentA{
+//   position: absolute;
+//   bottom: 6rem;
+//   left: 0;
+//   width: 300px;
+//   height: 300px;
+//   background-image: url('src/images/mexiqueMonument.png');
+//   background-size: cover;
+//   background-position: center;
+//   z-index: 300;
+
+// }
+// .monumentB{
+//   position: absolute;
+//   width: 300px;
+//   height: 300px;
+//   background-image: url('src/images/mexiqueMonument2.png');
+//   background-size: cover;
+//   background-position: center;
+//   align-self: flex-start;
+//   bottom: 5rem;
+//   left: 50%;
+//   z-index: 300;
+
+// }
+// .monumentC{
+//   position: absolute;
+//   width: 300px;
+//   height: 300px;
+//   background-image: url('src/images/mexiqueMonument3.png.png');
+//   background-size: cover;
+//   background-position: center;
+//   align-self: flex-start;
+//   z-index: 300;
+//   bottom: 6rem;
+//   right: 25%;
+
+// }
+
+// .drapeaux__container4{
+//   position: absolute;
+//   top: 2rem;
+//   right: -12000px;
+//   width: 400vw ;
+//   height: 100vh;
+//   display: flex;
+//   flex-direction: column;
+//   align-items: flex-end;
+//   gap: 10rem;
+//   transform: translate3d(0,0); 
+// }
+// .drapeaux1{
+//   position: relative;
+//   width: 100px;
+//   height: 100px;
+//   background-size: cover;
+//   z-index: 300;
+//   align-self: flex-end;
+//   background-image: url('src/images/mexicoDrapeaux.png');
+//   background-size: contain;
+
+// }
+// .drapeaux2{
+//   position: relative;
+//   width: 100px;
+//   height: 100px;
+//   align-self: flex-end;
+//   background-image: url('src/images/nigerDrapeaux.png');
+//   background-size: contain;
+//   z-index: 300;
+// }
+// .monumentA{
+//   position: absolute;
+//   bottom: 6rem;
+//   left: 0;
+//   width: 300px;
+//   height: 300px;
+//   background-image: url('src/images/mexiqueMonument.png');
+//   background-size: cover;
+//   background-position: center;
+//   z-index: 300;
+
+// }
+// .monumentB{
+//   position: absolute;
+//   width: 300px;
+//   height: 300px;
+//   background-image: url('src/images/mexiqueMonument2.png');
+//   background-size: cover;
+//   background-position: center;
+//   align-self: flex-start;
+//   bottom: 5rem;
+//   left: 50%;
+//   z-index: 300;
+
+// }
+// .monumentC{
+//   position: absolute;
+//   width: 300px;
+//   height: 300px;
+//   background-image: url('src/images/mexiqueMonument3.png.png');
+//   background-size: cover;
+//   background-position: center;
+//   align-self: flex-start;
+//   z-index: 300;
+//   bottom: 6rem;
+//   right: 25%;
+
+// }
+
+
+
+
+
+// .drapeaux__container5{
+//   position: absolute;
+//   top: 2rem;
+//   right: calc((-1440px) * 5);
+//   width: 400vw ;
+//   height: 100vh;
+//   display: flex;
+//   flex-direction: column;
+//   align-items: flex-end;
+//   gap: 10rem;
+//   transform: translate3d(0,0); 
+// }
+// .drapeaux1{
+//   position: relative;
+//   width: 100px;
+//   height: 100px;
+//   background-size: cover;
+//   z-index: 300;
+//   align-self: flex-end;
+//   background-image: url('src/images/mexicoDrapeaux.png');
+//   background-size: contain;
+
+// }
+// .drapeaux2{
+//   position: relative;
+//   width: 100px;
+//   height: 100px;
+//   align-self: flex-end;
+//   background-image: url('src/images/nigerDrapeaux.png');
+//   background-size: contain;
+//   z-index: 300;
+// }
+// .monumentA{
+//   position: absolute;
+//   bottom: 6rem;
+//   left: 0;
+//   width: 300px;
+//   height: 300px;
+//   background-image: url('src/images/mexiqueMonument.png');
+//   background-size: cover;
+//   background-position: center;
+//   z-index: 300;
+
+// }
+// .monumentB{
+//   position: absolute;
+//   width: 300px;
+//   height: 300px;
+//   background-image: url('src/images/mexiqueMonument2.png');
+//   background-size: cover;
+//   background-position: center;
+//   align-self: flex-start;
+//   bottom: 5rem;
+//   left: 50%;
+//   z-index: 300;
+
+// }
+// .monumentC{
+//   position: absolute;
+//   width: 300px;
+//   height: 300px;
+//   background-image: url('src/images/mexiqueMonument3.png.png');
+//   background-size: cover;
+//   background-position: center;
+//   align-self: flex-start;
+//   z-index: 300;
+//   bottom: 6rem;
+//   right: 25%;
+
+// }
+
 .congrats{
   position: fixed;
   width: 100vw;

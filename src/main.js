@@ -25,18 +25,9 @@ playBtn.innerHTML = bgTl.paused() ? 'Start' : 'Pause'
     ease:'linear',
 
   })
-  .to('.drapeaux__container', {
-    x: -window.innerWidth * 6,
-    delay:5,
-    duration: 13,
-    ease: 'linear'
-  },'<')
-  .to('.drapeaux__container2', {
-    x: -window.innerWidth * 6,
-    delay:10,
-    duration: 13,
-    ease: 'linear'
-  },'<')
+
+
+
   
 //   .to('.game', {
 //     x:'-6%',
