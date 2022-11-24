@@ -24,7 +24,7 @@ const collisionTest = (obstacle, vehicule) => {
     }
   }
   return true;
-} 
+};
 
 export const getCollision = () => {
   const obstaclePos = obstacle.getBoundingClientRect();

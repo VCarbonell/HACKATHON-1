@@ -9,28 +9,37 @@ const playBtn = document.querySelector('.playBtn');
 const bgTl = gsap.timeline();
 
 
- 
+ gsap.to('.game__sprite',{
+   y:'10px',
+   repeat:-1,
+   yoyo:true
+ })
 const play = () => {
-
-
-  bgTl.to('.levelOne', {
-    x:'-100%',
-    duration:10,
+  bgTl.to('.game', {
+    x:'-90%',
+    duration:80,
     delay:1,
-    ease:'linear'
+    ease:'linear',
 
   })
-.to('.obstacle', {
-  x:'-2000px',
-  duration:4
-}, 2)
-  .to('.levelTwo', {
-    x:'-200%',
-    duration:8,
-    ease:'linear'
-  }, 4)
-  bgTl.paused( !bgTl.paused());
-playBtn.innerHTML = bgTl.paused() ? 'Start' : 'Pause'
+  .to('.drapeaux__container', {
+    x: -window.innerWidth * 5,
+    delay:0,
+    duration: 10,
+    ease: 'linear'
+  }, '>')
+  
+
+// .to('.congrats',{
+//   opacity:0.5,
+//   onComplete : () =>{
+//     bgTl.kill()
+//   }
+// })
+
+
+
+
 
 }
 
