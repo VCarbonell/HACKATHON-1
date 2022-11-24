@@ -1,8 +1,9 @@
 import { getCollision } from "@/collision.js";
 
-const vehicule = document.querySelector('.vehicule');
-const screenWidth = screen.width;
-const screenHeight = screen.height;
+const navigation = () => {
+const vehicule = document.querySelector('#vehicule');
+const windowWidth = window.innerWidth;
+const windowHeight = window.innerHeight;
 
 let moveBy = 30;
 
@@ -12,20 +13,39 @@ window.addEventListener('load', () => {
   vehicule.style.bottom = 0;
 });
 
+let keysPressed = {};
+
 window.addEventListener('keydown', (e) => {
+  keysPressed[e.key] = true;
   switch(true) {
-    case e.key === 'ArrowLeft' && vehicule.style.left !== "0px":
+    case keysPressed.ArrowRight && keysPressed.ArrowUp && parseInt(vehicule.style.left) < windowWidth - 100 && parseInt(vehicule.style.bottom) < windowHeight - 100:
+        vehicule.style.left = parseInt(vehicule.style.left) + moveBy + 'px';
+        vehicule.style.bottom = parseInt(vehicule.style.bottom) + moveBy + 'px';
+      break;
+    case keysPressed.ArrowDown && keysPressed.ArrowRight && parseInt(vehicule.style.left) < windowWidth - 100 && vehicule.style.bottom !== '0px':
+        vehicule.style.bottom = parseInt(vehicule.style.bottom) - moveBy + 'px';
+        vehicule.style.left = parseInt(vehicule.style.left) + moveBy + 'px';
+      break;
+    case keysPressed.ArrowDown && keysPressed.ArrowLeft && vehicule.style.bottom !== '0px' && vehicule.style.left !== '0px':
+        vehicule.style.bottom = parseInt(vehicule.style.bottom) - moveBy + 'px';
         vehicule.style.left = parseInt(vehicule.style.left) - moveBy + 'px';
       break;
-    case e.key === 'ArrowRight' && vehicule.style.left !== screenWidth + "px":
+    case keysPressed.ArrowUp && keysPressed.ArrowLeft && vehicule.style.left !== '0px' && parseInt(vehicule.style.bottom) < windowHeight - 100:
+        vehicule.style.left = parseInt(vehicule.style.left) - moveBy + 'px';
+        vehicule.style.bottom = parseInt(vehicule.style.bottom) + moveBy + 'px';
+      break;  
+    case e.key === 'ArrowLeft' && vehicule.style.left !== '0px':
+        vehicule.style.left = parseInt(vehicule.style.left) - moveBy + 'px';
+      break;
+    case e.key === 'ArrowRight' && parseInt(vehicule.style.left) < windowWidth - 100:
       vehicule.style.left = parseInt(vehicule.style.left) + moveBy + 'px';
       break;
-    case e.key === 'ArrowUp' && vehicule.style.top !== "0px":
+    case e.key === 'ArrowUp' && parseInt(vehicule.style.bottom) < windowHeight - 100:
       vehicule.style.bottom = parseInt(vehicule.style.bottom) + moveBy + 'px';
       break;
-    case e. key === 'ArrowDown' && vehicule.style.bottom !== "0px":
+    case e.key === 'ArrowDown' && vehicule.style.bottom !== '0px':
       vehicule.style.bottom = parseInt(vehicule.style.bottom) - moveBy + 'px';
-      break;    
+      break;  
     default:
       console.log("Let's go!!!");
   }
@@ -35,3 +55,9 @@ window.addEventListener('keydown', (e) => {
     vehicule.style.bottom = 0;
   }
 });
+document.addEventListener('keyup', (e) => {
+    delete keysPressed[e.key];
+ });
+};
+
+export default navigation;

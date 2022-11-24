@@ -1,6 +1,7 @@
 import { gsap } from "gsap";
 import './style.scss';
 import './collision.js';
+import navigation from "./js/navigation";
 
 const playBtn = document.querySelector('.playBtn');
 
@@ -41,4 +42,4 @@ playBtn.addEventListener('click', play);
 
 
 
-window.resizeTo(500,500);
+navigation();
