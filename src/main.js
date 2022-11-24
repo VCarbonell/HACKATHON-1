@@ -19,43 +19,50 @@ const play = () => {
 playBtn.innerHTML = bgTl.paused() ? 'Start' : 'Pause'
 
   bgTl.to('.game', {
-    x:'-6%',
-    duration:10,
+    x:'-90%',
+    duration:80,
     delay:1,
     ease:'linear',
 
   })
   .to('.drapeaux__container', {
-    x: -window.innerWidth * 5,
-    delay:0,
-    duration: 10,
+    x: -window.innerWidth * 6,
+    delay:5,
+    duration: 13,
     ease: 'linear'
-  }, '>')
-  .to('.game', {
-    x:'-6%',
-    duration:10,
-    ease:'linear',
   },'<')
-  .to('.game', {
-  x:'-15%',
-  delay:0,
-  duration:15,
-  ease:'linear',
-}, '<')
-.to('.game', {
-  x:'-35%',
-  duration:15,
-  ease:'linear',
+  .to('.drapeaux__container2', {
+    x: -window.innerWidth * 6,
+    delay:10,
+    duration: 13,
+    ease: 'linear'
+  },'<')
+  
+//   .to('.game', {
+//     x:'-6%',
+//     duration:10,
+//     ease:'linear',
+//   },'<')
+//   .to('.game', {
+//   x:'-15%',
+//   delay:0,
+//   duration:15,
+//   ease:'linear',
+// }, '<')
+// .to('.game', {
+//   x:'-35%',
+//   duration:15,
+//   ease:'linear',
 
-}, '<')
-.to('.game', {
-  x:'-45%',
-  duration:15,
-  ease:'linear',
+// }, '<')
+// .to('.game', {
+//   x:'-45%',
+//   duration:15,
+//   ease:'linear',
   
 
 
-}, '<')
+// }, '<')
 .to('.congrats',{
   opacity:0.5,
   onComplete : () =>{
