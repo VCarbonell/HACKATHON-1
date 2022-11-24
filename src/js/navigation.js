@@ -1,7 +1,7 @@
-import { getCollision } from "@/collision.js";
+import { getCollision } from "../collision";
 
 const navigation = () => {
-const vehicule = document.querySelector('.vehicule');
+const vehicule = document.querySelector('.vehicule__active');
 const windowWidth = window.innerWidth;
 const windowHeight = window.innerHeight;
 

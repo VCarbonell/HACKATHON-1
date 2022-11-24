@@ -1,0 +1,25 @@
+.vehicule__active {
+  width: auto;
+  height: auto;
+  transition: all 0.1s linear;
+  position: absolute;
+}
+
+.vehicule__next {
+  width: auto;
+  height: auto;
+  transition: all 0.1s linear;
+  position: absolute;
+  left: 500px;
+  top: 400px;
+  border: 1px solid black;
+}
+
+#avion {
+  width: 150px;
+  transform: scaleX(-1);
+}
+
+#airballoon {
+  width: 150px;
+}
