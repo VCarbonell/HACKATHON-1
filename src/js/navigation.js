@@ -1,3 +1,6 @@
+import { getCollision } from "../collision";
+
+const navigation = () => {
 const vehicule = document.querySelector('.vehicule__active');
 const windowWidth = window.innerWidth;
 const windowHeight = window.innerHeight;
@@ -46,13 +49,15 @@ window.addEventListener('keydown', (e) => {
     default:
       console.log("Let's go!!!");
   }
+  const collision = getCollision();
+  if (collision === false) {
+    vehicule.style.left = 0;
+    vehicule.style.bottom = 0;
+  }
 });
-
 document.addEventListener('keyup', (e) => {
     delete keysPressed[e.key];
  });
-
-const change = () => {
-console.log("coucou");
 };
 
+export default navigation;

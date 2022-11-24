@@ -7,17 +7,29 @@
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> -->
     <meta hid="description" name="description" content="" />
     <meta name="format-detection" content="telephone=no" />
-    <title>Title</title>
+    <title>Jeu</title>
   </head>
   <body>
-
     <!-- navigation test -->
-    <div class="vehicule__active">
-      <img src="./src/assets/avion.png" alt="avion" id="avion" />
-    </div>
-    <div class="vehicule__next">
-      <img src="./src/assets/airballoon.png" alt="airballoon" id="airballoon" />
-    </div>
+
+    <!-- end navigation test -->
+    <div class="obstacle">Obstacle</div>
+    <div class="game__sprite vehicule__active"></div>
+    <button class="playBtn">Ready ?</button>
+    <section class="game">
+      <div class="vehicule__active">
+        <img src="./src/assets/avion.png" alt="avion" id="avion" />
+      </div>
+      <div class="vehicule__next">
+        <img
+          src="./src/assets/airballoon.png"
+          alt="airballoon"
+          id="airballoon" />
+      </div>
+      <img class="img levelOne" src="src/images/FOND6_mars.png" alt="" />
+      <!-- <img class="img levelOne" src="src/images/mars.png" alt=""> -->
+      <!-- <img class="img levelTwo" src="src/images/mars.png" alt=""> -->
+    </section>
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
