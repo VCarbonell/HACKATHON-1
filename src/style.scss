@@ -49,3 +49,53 @@ table {
 }
 
 // BIG FAT RESET ABOVE
+.playBtn{
+  position: fixed;
+  top: 10%;
+  left: 10%;
+  transform: translate(-10%, -10%);
+  z-index: 100;
+  cursor: pointer;
+}
+
+// body{
+//   overflow: hidden;
+
+// }
+.obstacle{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 20rem;
+  right: -100px;
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+  color: white;
+  z-index: 100;
+  transform: translate3d(0,0);
+}
+.levelTwo{
+  filter: blur(10px);
+}
+.game{
+  position: absolute;
+  width: auto;
+  display: flex;
+  flex-flow: row nowrap;
+  transform: translate3d(0, 0);
+  &__sprite{
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 300px;
+    z-index: 200;
+    background-image: url('./src/images/pngegg (21).png');
+    background-position: center;
+    background-size: cover;
+    transform: scaleX(-1)
+  }
+}
