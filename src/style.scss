@@ -62,7 +62,6 @@ table {
 
 body{
   overflow: hidden;
-
 }
 .obstacle{
   position: absolute;
@@ -88,11 +87,7 @@ body{
   flex-flow: row nowrap;
   transform: translate3d(0, 0);
   &__sprite{
-		// border: 1px solid black;
-    width: 300px;
-    height: 150px;
     z-index: 200;
-    background-image: url('./src/images/pngegg (21).png');
     background-position: center;
     background-size: cover;
   }

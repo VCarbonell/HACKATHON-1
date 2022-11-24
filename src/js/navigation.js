@@ -1,7 +1,9 @@
 import { getCollision } from "../collision";
+import { changeVeh } from "./changeVeh";
 
 const navigation = () => {
 const vehicule = document.querySelector('.vehicule__active');
+const sprite = document.querySelector('.game__sprite');
 const windowWidth = window.innerWidth;
 const windowHeight = window.innerHeight;
 
@@ -45,15 +47,41 @@ window.addEventListener('keydown', (e) => {
       break;
     case e.key === 'ArrowDown' && vehicule.style.bottom !== '0px':
       vehicule.style.bottom = parseInt(vehicule.style.bottom) - moveBy + 'px';
-      break;  
+      break;
     default:
       console.log("Let's go!!!");
-  }
+  };
   const collision = getCollision();
   if (collision === false) {
     vehicule.style.left = 0;
     vehicule.style.bottom = 0;
-  }
+  };
+  const { change2, change3, change4, change5, change6 } = changeVeh();
+  if (change2 === true) {
+    vehicule.style.backgroundImage = "url('./src/images/montgolfiere.png')";
+    sprite.style.width = "calc(0.7*306px)";
+    sprite.style.height = "calc(0.7*540px)";
+  };
+  if (change3 === true) {
+    vehicule.style.backgroundImage = "url('./src/images/dirigable.png')";
+    sprite.style.width = "calc(0.5*708px)";
+    sprite.style.height = "calc(0.5*297px)";
+  };
+  if (change4 === true) {
+    vehicule.style.backgroundImage = "url('./src/images/avion2.png')";
+    sprite.style.width = "calc(0.5*871px)";
+    sprite.style.height = "calc(0.5*343px)";
+  };
+  if (change5 === true) {
+    vehicule.style.backgroundImage = "url('./src/images/avion.png')";
+    sprite.style.width = "calc(0.5*995px)";
+    sprite.style.height = "calc(0.5*324px)";
+  };
+  if (change6 === true) {
+    vehicule.style.backgroundImage = "url('./src/images/soucoupe.png')";
+    sprite.style.width = "calc(0.8*396px)";
+    sprite.style.height = "calc(0.8*235px)";
+  };
 });
 document.addEventListener('keyup', (e) => {
     delete keysPressed[e.key];

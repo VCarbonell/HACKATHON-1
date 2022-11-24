@@ -12,14 +12,54 @@
   position: absolute;
   left: 500px;
   top: 400px;
-  border: 1px solid black;
 }
 
-#avion {
-  width: 150px;
-  transform: scaleX(-1);
+.level2__change {
+  border: 1px solid red;
+  position: absolute;
+  left: 400px;
+  width: 55px;
+  height: 100vh;
+  z-index: 100;
+  backdrop-filter: blur(20px);
 }
 
-#airballoon {
-  width: 150px;
+.level3__change {
+  border: 1px solid red;
+  position: absolute;
+  left: 600px;
+  width: 55px;
+  height: 100vh;
+  z-index: 100;
+  backdrop-filter: blur(20px);
+}
+
+.level4__change {
+  border: 1px solid red;
+  position: absolute;
+  left: 800px;
+  width: 55px;
+  height: 100vh;
+  z-index: 100;
+  backdrop-filter: blur(20px);
+}
+
+.level5__change {
+  border: 1px solid red;
+  position: absolute;
+  left: 1000px;
+  width: 55px;
+  height: 100vh;
+  z-index: 100;
+  backdrop-filter: blur(20px);
+}
+
+.level6__change {
+  border: 1px solid red;
+  position: absolute;
+  left: 1500px;
+  width: 55px;
+  height: 100vh;
+  z-index: 100;
+  backdrop-filter: blur(20px);
 }
