@@ -52,7 +52,7 @@ table {
   top: 10%;
   left: 10%;
   transform: translate(-10%, -10%);
-  z-index: 100;
+  z-index: 300;
   cursor: pointer;
 }
 
@@ -60,7 +60,7 @@ table {
 //   overflow: hidden;
 
 // }
-.obstacle{
+.obstacle {
   position: absolute;
   display: flex;
   justify-content: center;
@@ -74,9 +74,21 @@ table {
   z-index: 100;
   transform: translate3d(0,0);
 }
-.levelTwo{
-  filter: blur(10px);
+.obstacle2{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: -100px;
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+  color: white;
+  z-index: 100;
+  transform: translate3d(0,0);
+  top: 30rem;
 }
+
 .game{
   position: absolute;
   width: auto;
@@ -96,4 +108,12 @@ table {
     background-size: cover;
     transform: scaleX(-1)
   }
+}
+.congrats{
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: rgb(255, 226, 226);
+  z-index: 200;
+  opacity: 0;
 }
