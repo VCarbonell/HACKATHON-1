@@ -79,12 +79,61 @@ table {
   margin: 0;
   width: 320px;
   height: 160px;
-  right: 20px;
+  right: 0px;
   top: -30px;
   z-index: 200;
   background-position: center;
   background-size: cover;
 }
+
+.points {
+  position: absolute;
+  margin: 0;
+  width: 280px;
+  height: 60px;
+  right: -5px;
+  top: 90px;
+  z-index: 200;
+  background-position: center;
+  background-size: cover;
+}
+
+
+// .drapeau__wrong {
+//   position: absolute;
+//   left: 500px;
+//   top: 0px;
+//   width: 150px;
+//   height: 50vh;
+//   z-index: 300;
+//   border: 1px solid black;
+// }
+
+// .drapeau__wrong img {
+//   width: 150px;
+//   position: absolute;
+//   top: 0;
+//   bottom: 0;
+//   margin: auto;
+// }
+
+// .drapeau__correct {
+//   position: absolute;
+//     left: 500px;
+//     top: 50vh;
+//     width: 150px;
+//     height: 50vh;
+//     z-index: 300;
+//     border: 1px solid black;
+// }
+
+// .drapeau__correct img {
+//   width: 150px;
+//   position: absolute;
+//   top: 0;
+//   bottom: 0;
+//   margin: auto;
+// }
 
 .gameover {
     display: none;
@@ -132,39 +181,23 @@ body{
 }
 
 
-.drapeaux__container{
-  position: relative;
-  top: 2rem;
-  right: -100%;
-  width: 400vw ;
-  height: 100vh;
-}
 
-.drapeaux__container2{
-  position: relative;
-  top: 2rem;
-  right: -100%;
-  width: 400vw ;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 10rem;
-  transform: translate3d(0,0); 
-}
 .drapeaux1{
-  position: relative;
+  position: absolute;
+  top: 3rem;
+  left: 10500px;
   width: 100px;
   height: 100px;
   background-size: cover;
   z-index: 300;
-  align-self: flex-end;
   background-image: url('src/images/mexicoDrapeaux.png');
   background-size: contain;
 
 }
 .drapeaux2{
-  position: relative;
+  position: absolute;
+  top: 20rem;
+  left: 10500px;
   width: 100px;
   height: 100px;
   align-self: flex-end;
@@ -175,7 +208,7 @@ body{
 .monumentA{
   position: absolute;
   bottom: 6rem;
-  left: 0;
+  left: 4300px;
   width: 300px;
   height: 300px;
   background-image: url('src/images/mexiqueMonument.png');
@@ -193,7 +226,7 @@ body{
   background-position: center;
   align-self: flex-start;
   bottom: 5rem;
-  left: 50%;
+  left: 5800px;
   z-index: 300;
 
 }
@@ -207,8 +240,114 @@ body{
   align-self: flex-start;
   z-index: 300;
   bottom: 6rem;
-  right: 25%;
+  left: 7700px;
 
+}
+
+.drapeaux1Lvl2{
+  background-image: url('src/images/nigerDrapeaux.png');
+  left: 19500px;
+}
+.drapeaux2Lvl2{
+  background-image: url('src/images/nigeriaDrapeaux.png');
+  left: 19500px;
+
+}
+
+.monumentALvl2{
+  background-image: url('src/images/egypteMonument.png');
+  width: 700px;
+  height: 800px;
+  left: 12500px;
+  background-size: cover;
+  background-position: center;
+}
+.monumentBLvl2{
+  background-image: url('src/images/egypteMonument2.png');
+  width: 700px;
+  left: 14000px;
+  bottom: 7rem;
+  background-size: cover;
+  background-position: center;
+}
+.monumentCLvl2{
+  background-image: url('src/images/egypteMonument3.png');
+  width: 1600px;
+  height: 700px;
+  left: 15500px;
+  bottom: 0;
+  background-size: cover;
+  background-position: center;
+}
+
+// lvl3
+
+.drapeaux1Lvl3{
+  background-image: url('src/images/USADrapeaux.png');
+  left: 28000px;
+}
+.drapeaux2Lvl3{
+  background-image: url('src/images/ukraineDrapeaux.png');
+  left: 28000px;
+}
+.monumentALvl3{
+  background-image: url('src/images/westernMonument1.png');
+  width: 400px;
+  height: 400px;
+  left: 21500px;
+  background-size: cover;
+  background-position: center;
+}
+.monumentBLvl3{
+  background-image: url('src/images/westernMonument2.png');
+  width: 400px;
+  height: 400px;
+  left: 23000px;
+  background-size: cover;
+  background-position: center;
+}
+.monumentCLvl3{
+  background-image: url('src/images/westernMonument3.png');
+  width: 400px;
+  height: 400px;
+  left: 26500px;
+  bottom: 10rem;
+  background-size: cover;
+  background-position: center;
+}
+// lvl 4
+.drapeaux1Lvl4{
+  background-image: url('src/images/france.png');
+  left: 38000px;
+}
+.drapeaux2Lvl4{
+  background-image: url('src/images/japanDrapeaux.png');
+  left: 38000px;
+}
+.monumentALvl4{
+  background-image: url('src/images/parisMonument1.png');
+  width: 400px;
+  height: 400px;
+  left: 31500px;
+  background-size: cover;
+  background-position: center;
+}
+.monumentBLvl4{
+  background-image: url('src/images/parisMonument2.png');
+  width: 400px;
+  height: 400px;
+  left: 33000px;
+  background-size: cover;
+  background-position: center;
+}
+.monumentCLvl4{
+  background-image: url('src/images/parisMonument3.png.png');
+  width: 400px;
+  height: 400px;
+  left: 36000px;
+  bottom: 10rem;
+  background-size: cover;
+  background-position: center;
 }
 .game{
   position: absolute;

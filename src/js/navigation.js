@@ -1,11 +1,13 @@
 import { getCollision } from "../collision";
 import { changeVeh } from "./changeVeh";
+import { getPoint } from "./getPoint";
 
 const navigation = () => {
 const vehicule = document.querySelector('.vehicule__active');
 const sprite = document.querySelector('.game__sprite');
 const vies = document.querySelector('.vies');
 const gameover = document.querySelector('.gameover');
+const points = document.querySelector('.points');
 const windowWidth = window.innerWidth;
 const windowHeight = window.innerHeight;
 
@@ -19,6 +21,7 @@ window.addEventListener('load', () => {
 
 let keysPressed = {};
 let number = 5;
+let pointCount = 0;
 
 let alreadyHit = false;
 
@@ -108,6 +111,14 @@ window.addEventListener('keydown', (e) => {
     sprite.style.width = "calc(0.8*396px)";
     sprite.style.height = "calc(0.8*235px)";
   };
+
+  const point = getPoint();
+  if (point === true) {
+    if (pointCount < 4) {
+      pointCount++;
+      points.style.backgroundImage = `url('./src/images/${pointCount}points.png`;
+    }
+  }
 });
 document.addEventListener('keyup', (e) => {
     delete keysPressed[e.key];
