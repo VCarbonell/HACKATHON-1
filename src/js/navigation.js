@@ -23,6 +23,10 @@ const homeAnimation = document.querySelector('.homeAnimation');
 const accueilSound = document.querySelector('.accueilSound');
 const inGameSound = document.querySelector('.inGameSound');
 
+inGameSound.volume = .7;
+
+
+
 
 
 let moveBy = 30;
@@ -158,8 +162,8 @@ window.addEventListener('keydown', (e) => {
   };
   if (change6 === true) {
     vehicule.style.backgroundImage = "url('./src/images/soucoupe.png')";
-    sprite.style.width = "calc(0.8*396px)";
-    sprite.style.height = "calc(0.8*235px)";
+    sprite.style.width = "calc(0.9*396px)";
+    sprite.style.height = "calc(0.9*235px)";
   };
 
   const point = getPoint();

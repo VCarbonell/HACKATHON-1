@@ -27,7 +27,7 @@ const bgTl = gsap.timeline();
  
  gsap.to(homeAnimation, {
    display:'none',
-   delay:15,
+   delay:17,
  })
 
 const play = () => {
@@ -50,8 +50,9 @@ const play = () => {
   youWinAudio.play()
 },'<')
 .add(()=>{
+  inGameSound.pause()
   youWinMusic.play()
-})
+},'<')
 .to('.credit', {
   delay:4,
   y:'-2272px',
