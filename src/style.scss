@@ -3,6 +3,7 @@
 @import 'scss/test.css';
 @import 'scss/navigation.scss';
 @import 'scss/selection.scss';
+@import 'scss/explosion.scss';
 @import url(//db.onlinewebfonts.com/c/bc1523d2e78d550ef9c38c497b092aa2?family=Naughty+Squirrel+Demo);
 
 
@@ -83,7 +84,7 @@ table {
   height: 160px;
   right: 0px;
   top: -30px;
-  z-index: 200;
+  z-index: 1100;
   background-position: center;
   background-size: cover;
 }
@@ -95,7 +96,7 @@ table {
   height: 60px;
   right: -5px;
   top: 90px;
-  z-index: 200;
+  z-index: 1100;
   background-position: center;
   background-size: cover;
 }
@@ -109,7 +110,7 @@ table {
     bottom: 0;
     top: 0;
     margin: auto;
-    z-index: 400;
+    z-index: 800;
     width: 700px;
     height: 400px;
     background-color: transparent;
@@ -128,7 +129,7 @@ body{
 	position: absolute;
 	width: 250px;
   color: white;
-  z-index: 100;
+  z-index: 600;
 	background-size: contain;
 	background-repeat: no-repeat;
 }
@@ -154,7 +155,7 @@ body{
   width: 150px;
   height: 49vh;
   background-size: cover;
-  z-index: 300;
+  z-index: 700;
   background-image: url('src/images/mexicoDrapeaux.png');
   background-size: contain;
   background-position: center;
@@ -171,7 +172,7 @@ body{
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
-  z-index: 300;
+  z-index: 700;
 }
 .monumentA{
   position: absolute;
@@ -182,7 +183,7 @@ body{
   background-image: url('src/images/mexiqueMonument.png');
   background-size: cover;
   background-position: center;
-  z-index: 300;
+  z-index: 500;
 
 }
 .monumentB{
@@ -195,7 +196,7 @@ body{
   align-self: flex-start;
   bottom: 5rem;
   left: 5800px;
-  z-index: 300;
+  z-index: 500;
 
 }
 .monumentC{
@@ -206,7 +207,7 @@ body{
   background-size: cover;
   background-position: center;
   align-self: flex-start;
-  z-index: 300;
+  z-index: 500;
   bottom: 6rem;
   left: 7700px;
 
@@ -324,7 +325,7 @@ body{
   flex-flow: row nowrap;
   transform: translate3d(0, 0);
   &__sprite{
-    z-index: 200;
+    z-index: 900;
     background-position: center;
     background-size: cover;
   }
@@ -340,13 +341,15 @@ body{
   opacity: 0;
   z-index: 400;
 }
+
 .credit{
   position: absolute;
   top: 0;
   height: 100vh;
   width: 100vw;
   background-color: transparent;
-  z-index: 900;
+  z-index: 1200;
+
   opacity: 1;
   text-align: center;
   transform: translate3d(0,1000px, 0);
@@ -375,7 +378,7 @@ margin: 2rem 0
 position: absolute;
 width: 100vw;
 height: 100vh;
-z-index: 1000 !important;
+z-index: 1300 !important;
 display: block;
 background-color: black;
 }

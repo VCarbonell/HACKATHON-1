@@ -10,6 +10,11 @@
     <title>Jeu</title>
   </head>
   <body>
+    <audio src="./src/assets/audio/ButtonClick.mp3" class="buttonClickSound"></audio>
+    <audio loop src="./src/assets/audio/PageAccueil.mp3" class="accueilSound"></audio>
+    <audio loop src="./src/assets/audio/InGame.mp3" class="inGameSound"></audio>
+    <audio src="./src/assets/audio/ExplosionSound.wav" class="explosionSound"></audio>
+    <!-- <img class="img levelOne" src="src/images/FONDFINAL.png" alt=""> -->
 
 
     <video  controls class="homeAnimation"  >
@@ -22,7 +27,9 @@
         background-image: url('./src/images/dino.png');
         width: 300px;
         height: 302px;
-      "></div>
+      ">
+      <div class="explosion"></div>
+      </div>
     <div class="playerSelection">
       <div class="playerContainer">
         <img src="./src/images/poppy.png" alt="POPPY" class="player">
@@ -89,11 +96,12 @@
       </ul>
       <span>Time Travel©</span>
     </div>
-
-
-<audio class="gameOverAudio" src="src/assets/audio/game-over-yeah-1_8hMpqz1K.mp3"></audio>
-<audio class="youWinAudio" src="src/assets/audio/You_Win_Voice_Sound_Effect.mp3"></audio>
-<audio loop class="youWinMusic" src="src/assets/audio/Epic_Win_-_Sound_Effect.mp3"></audio>
+    <audio id="buzzer" src="./src/assets/audio/buzzer.mp3"></audio>
+    <audio id="correct" src="./src/assets/audio/correct.mp3"></audio>
+    <audio id="wrong" src="./src/assets/audio/wrong.mp3"></audio>
+    <audio class="gameOverAudio" src="src/assets/audio/game-over-yeah-1_8hMpqz1K.mp3"></audio>
+    <audio class="youWinAudio" src="src/assets/audio/You_Win_Voice_Sound_Effect.mp3"></audio>
+    <audio loop class="youWinMusic" src="src/assets/audio/Epic_Win_-_Sound_Effect.mp3"></audio>
 
     <script type="module" src="/src/main.js"></script>
   </body>

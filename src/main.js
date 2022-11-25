@@ -5,10 +5,14 @@ import './obstacle.js'
 import './collision.js';
 import navigation from "./js/navigation";
 
+const accueilSound = document.querySelector('.accueilSound');
+const inGameSound = document.querySelector('.inGameSound');
+const buttonSound = document.querySelector('.buttonClickSound');
 const playBtn = document.querySelector('.playBtn');
 const youWinAudio = document.querySelector('.youWinAudio')
 const youWinMusic = document.querySelector('.youWinMusic')
 const homeAnimation = document.querySelector('.homeAnimation')
+
 
 
 
@@ -27,13 +31,15 @@ const bgTl = gsap.timeline();
  })
 
 const play = () => {
+  buttonSound.play();
+  accueilSound.pause();
+  inGameSound.play();
   playBtn.style.display = "none";
   bgTl.to('.game', {
     x:'-90%',
     duration:80,
     delay:1,
     ease:'linear',
-
   })
 .to('.congrats',{
   opacity:1,
@@ -54,21 +60,10 @@ const play = () => {
 })
 }
 
-
-
-
 playBtn.addEventListener('click', play);
-
-
-
-
-
-
-
-
 
 navigation();
 
-export default bgTl
+export default bgTl;
 
 

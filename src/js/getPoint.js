@@ -2,7 +2,6 @@ import { def } from "@vue/shared";
 
 const vehicule = document.querySelector('.vehicule__active');
 const drapeau = document.querySelectorAll('.drapeau__correct');
-console.log(drapeau);
 
 const getAllSquare = (myPos) => {
   const allSquareX = {
