@@ -2,6 +2,7 @@ import { getCollision } from "../collision";
 import { getFlagChoice } from "../collision";
 import { changeVeh } from "./changeVeh";
 import { getPoint } from "./getPoint";
+import { gsap } from "gsap";
 import bgTl from '../main';
 
 const navigation = () => {
@@ -10,6 +11,9 @@ const sprite = document.querySelector('.game__sprite');
 const vies = document.querySelector('.vies');
 const gameover = document.querySelector('.gameover');
 const points = document.querySelector('.points');
+const buzzer = document.querySelector('#buzzer');
+const correct = document.querySelector('#correct');
+const wrong = document.querySelector('#wrong');
 const windowWidth = window.innerWidth;
 const windowHeight = window.innerHeight;
 
@@ -81,14 +85,21 @@ window.addEventListener('keydown', (e) => {
     if (number > 1) {
       number = number - 1;
       vies.style.backgroundImage = `url('./src/images/${number}vies.png')`;
+      buzzer.play();
     } else {
       number = number - 1;
       vies.style.backgroundImage = `url('./src/images/${number}vies.png')`;
       gameover.style.display = "block";
       bgTl.kill()
-
     }
   };
+
+  const shake = () => {
+  gsap.to('body', {
+    x:'-40px',
+    repeat: 3,
+    duration: 0.05,
+    yoyo: true,})};
 
   const flag = getFlagChoice();
   if (flag && !alreadyHitFlag) {
@@ -98,7 +109,12 @@ window.addEventListener('keydown', (e) => {
     }, 1500)
     pointCount += 1;
     points.style.backgroundImage = `url('./src/images/${pointCount}point.png')`;
-  }
+    correct.play();
+  };
+  if (flag === false) {
+    wrong.play();
+    shake();
+  };
 
   const { change2, change3, change4, change5, change6 } = changeVeh();
   if (change2 === true) {

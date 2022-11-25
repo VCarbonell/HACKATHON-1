@@ -6,7 +6,6 @@ import './collision.js';
 import navigation from "./js/navigation";
 
 const playBtn = document.querySelector('.playBtn');
-
 const bgTl = gsap.timeline();
 
 
@@ -23,7 +22,6 @@ const play = () => {
     duration:80,
     delay:1,
     ease:'linear',
-
   })
 
 .to('.congrats',{
@@ -60,9 +58,8 @@ playBtn.addEventListener('click', play);
 
 
 
-
 navigation();
 
-export default bgTl
+export default bgTl;
 
 

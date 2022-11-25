@@ -50,7 +50,12 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-
+#shake {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 500;
+}
 // BIG FAT RESET ABOVE
 .playBtn{
   display: none;
@@ -99,43 +104,6 @@ table {
   background-position: center;
   background-size: cover;
 }
-
-
-// .drapeau__wrong {
-//   position: absolute;
-//   left: 500px;
-//   top: 0px;
-//   width: 150px;
-//   height: 50vh;
-//   z-index: 300;
-//   border: 1px solid black;
-// }
-
-// .drapeau__wrong img {
-//   width: 150px;
-//   position: absolute;
-//   top: 0;
-//   bottom: 0;
-//   margin: auto;
-// }
-
-// .drapeau__correct {
-//   position: absolute;
-//     left: 500px;
-//     top: 50vh;
-//     width: 150px;
-//     height: 50vh;
-//     z-index: 300;
-//     border: 1px solid black;
-// }
-
-// .drapeau__correct img {
-//   width: 150px;
-//   position: absolute;
-//   top: 0;
-//   bottom: 0;
-//   margin: auto;
-// }
 
 .gameover {
     display: none;
@@ -377,6 +345,7 @@ body{
   opacity: 0;
   z-index: 400;
 }
+
 .credit{
   position: absolute;
   top: 750px;
