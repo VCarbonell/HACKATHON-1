@@ -5,7 +5,12 @@ import './obstacle.js'
 import './collision.js';
 import navigation from "./js/navigation";
 
+const accueilSound = document.querySelector('.accueilSound');
+const inGameSound = document.querySelector('.inGameSound');
+const buttonSound = document.querySelector('.buttonClickSound');
 const playBtn = document.querySelector('.playBtn');
+
+accueilSound.play();
 
 const bgTl = gsap.timeline();
 
@@ -17,6 +22,9 @@ const bgTl = gsap.timeline();
  })
 
 const play = () => {
+  buttonSound.play();
+  accueilSound.pause();
+  inGameSound.play();
   playBtn.style.display = "none";
   bgTl.to('.game', {
     x:'-90%',

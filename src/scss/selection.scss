@@ -3,7 +3,7 @@
 .playerSelection {
   position: absolute;
   left: 0;
-  z-index: 500;
+  z-index: 1100;
   width: 70vw;
   height: 70vh;
   margin-left: 15vw;
@@ -37,7 +37,7 @@
   position: absolute;
   top: 15px;
   right: 400px;
-  z-index: 500;
+  z-index: 1100;
   font-family: "Naughty Squirrel Demo";
   font-size: 60px;
   color: white;

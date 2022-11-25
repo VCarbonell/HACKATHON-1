@@ -10,6 +10,10 @@
     <title>Jeu</title>
   </head>
   <body>
+    <audio src="./src/assets/audio/ButtonClick.mp3" class="buttonClickSound"></audio>
+    <audio loop src="./src/assets/audio/PageAccueil.mp3" class="accueilSound"></audio>
+    <audio loop src="./src/assets/audio/InGame.mp3" class="inGameSound"></audio>
+    <audio src="./src/assets/audio/ExplosionSound.mp3" class="explosionSound"></audio>
     <!-- <img class="img levelOne" src="src/images/FONDFINAL.png" alt=""> -->
     <div class="congrats"></div>
     <div
@@ -18,7 +22,9 @@
         background-image: url('./src/images/dino.png');
         width: 300px;
         height: 302px;
-      "></div>
+      ">
+      <div class="explosion"></div>
+      </div>
     <div class="playerSelection">
       <div class="playerContainer">
         <img src="./src/images/poppy.png" alt="POPPY" class="player">

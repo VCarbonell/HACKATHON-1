@@ -12,6 +12,8 @@ const gameover = document.querySelector('.gameover');
 const points = document.querySelector('.points');
 const windowWidth = window.innerWidth;
 const windowHeight = window.innerHeight;
+const explosion = document.querySelector('.explosion');
+const explosionSound = document.querySelector('.explosionSound');
 
 let moveBy = 30;
 
@@ -84,9 +86,11 @@ window.addEventListener('keydown', (e) => {
     } else {
       number = number - 1;
       vies.style.backgroundImage = `url('./src/images/${number}vies.png')`;
+      explosion.classList.add("explosionAnim");
+      vehicule.classList.add("vehiculeDeath");
+      explosionSound.play();
       gameover.style.display = "block";
       bgTl.kill()
-
     }
   };
 

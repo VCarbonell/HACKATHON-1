@@ -29,7 +29,7 @@ const levels = [
       },
       {
         minLeft: 9100,
-        maxLeft: 11700,
+        maxLeft: 10400,
       },
     ]
   },
@@ -46,7 +46,7 @@ const levels = [
       },
       {
         minLeft: 17900,
-        maxLeft: 20300,
+        maxLeft: 19200,
       },
     ]
   },
@@ -63,7 +63,7 @@ const levels = [
       },
       { 
         minLeft: 26400,
-        maxLeft: 28700,
+        maxLeft: 27700,
       },
     ]
   },
@@ -80,7 +80,7 @@ const levels = [
       },
       { 
         minLeft: 36200,
-        maxLeft: 38800,
+        maxLeft: 37500,
       },
     ]
   },
