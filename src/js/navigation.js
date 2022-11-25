@@ -1,5 +1,6 @@
 import { getCollision } from "../collision";
 import { changeVeh } from "./changeVeh";
+import { getPoint } from "./getPoint";
 import bgTl from '../main';
 
 const navigation = () => {
@@ -7,6 +8,7 @@ const vehicule = document.querySelector('.vehicule__active');
 const sprite = document.querySelector('.game__sprite');
 const vies = document.querySelector('.vies');
 const gameover = document.querySelector('.gameover');
+const points = document.querySelector('.points');
 const windowWidth = window.innerWidth;
 const windowHeight = window.innerHeight;
 
@@ -20,6 +22,9 @@ window.addEventListener('load', () => {
 
 let keysPressed = {};
 let number = 5;
+let pointCount = 0;
+
+let alreadyHit = false;
 
 window.addEventListener('keydown', (e) => {
   keysPressed[e.key] = true;
@@ -64,13 +69,19 @@ window.addEventListener('keydown', (e) => {
       console.log("Let's go!!!");
   };
   const collision = getCollision();
-  if (collision === true) {
-    vehicule.style.left = 0;
-    vehicule.style.bottom = 0;
-    if (number > 0) {
+  if (collision === true && alreadyHit === false) {
+    vehicule.classList.add("blink");
+    alreadyHit = true;
+    setTimeout(() => {
+      vehicule.classList.remove("blink");
+      alreadyHit = false;
+    }, 1500);
+    if (number > 1) {
       number = number - 1;
       vies.style.backgroundImage = `url('./src/images/${number}vies.png')`;
     } else {
+      number = number - 1;
+      vies.style.backgroundImage = `url('./src/images/${number}vies.png')`;
       gameover.style.display = "block";
       bgTl.kill()
 
@@ -103,6 +114,14 @@ window.addEventListener('keydown', (e) => {
     sprite.style.width = "calc(0.8*396px)";
     sprite.style.height = "calc(0.8*235px)";
   };
+
+  const point = getPoint();
+  if (point === true) {
+    if (pointCount < 4) {
+      pointCount++;
+      points.style.backgroundImage = `url('./src/images/${pointCount}points.png`;
+    }
+  }
 });
 document.addEventListener('keyup', (e) => {
     delete keysPressed[e.key];
