@@ -100,43 +100,6 @@ table {
   background-size: cover;
 }
 
-
-// .drapeau__wrong {
-//   position: absolute;
-//   left: 500px;
-//   top: 0px;
-//   width: 150px;
-//   height: 50vh;
-//   z-index: 300;
-//   border: 1px solid black;
-// }
-
-// .drapeau__wrong img {
-//   width: 150px;
-//   position: absolute;
-//   top: 0;
-//   bottom: 0;
-//   margin: auto;
-// }
-
-// .drapeau__correct {
-//   position: absolute;
-//     left: 500px;
-//     top: 50vh;
-//     width: 150px;
-//     height: 50vh;
-//     z-index: 300;
-//     border: 1px solid black;
-// }
-
-// .drapeau__correct img {
-//   width: 150px;
-//   position: absolute;
-//   top: 0;
-//   bottom: 0;
-//   margin: auto;
-// }
-
 .gameover {
     display: none;
     background-image: url('./images/gameover.png');
@@ -379,15 +342,14 @@ body{
 }
 .credit{
   position: absolute;
-  top: 750px;
+  top: 0;
   height: 100vh;
   width: 100vw;
   background-color: transparent;
   z-index: 900;
-
   opacity: 1;
   text-align: center;
-  transform: translate3d(0,0);
+  transform: translate3d(0,1000px, 0);
   &__title{
     font-size: 10rem;
     color: white;
@@ -399,7 +361,8 @@ body{
  li{
 font-size: 3rem;
 font-family: "Naughty Squirrel Demo" ;
-color: rgb(242, 119, 25);
+color:white;
+text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.569);
 margin: 2rem 0
   }
   span{
@@ -407,4 +370,12 @@ margin: 2rem 0
     background-color: white;
     border-radius: 10px;
   }
+}
+.homeAnimation{
+position: absolute;
+width: 100vw;
+height: 100vh;
+z-index: 1000 !important;
+display: block;
+background-color: black;
 }

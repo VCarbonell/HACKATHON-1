@@ -12,6 +12,9 @@ const gameover = document.querySelector('.gameover');
 const points = document.querySelector('.points');
 const windowWidth = window.innerWidth;
 const windowHeight = window.innerHeight;
+const gameOverAudio = document.querySelector('.gameOverAudio')
+const homeAnimation = document.querySelector('.homeAnimation')
+
 
 let moveBy = 30;
 
@@ -19,6 +22,8 @@ window.addEventListener('load', () => {
   vehicule.style.position = 'absolute';
   vehicule.style.left = "0px";
   vehicule.style.bottom = "350px";
+  homeAnimation.play()
+
 });
 
 let keysPressed = {};
@@ -85,6 +90,7 @@ window.addEventListener('keydown', (e) => {
       number = number - 1;
       vies.style.backgroundImage = `url('./src/images/${number}vies.png')`;
       gameover.style.display = "block";
+      gameOverAudio.play()
       bgTl.kill()
 
     }

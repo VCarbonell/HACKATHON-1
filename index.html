@@ -10,7 +10,11 @@
     <title>Jeu</title>
   </head>
   <body>
-    <!-- <img class="img levelOne" src="src/images/FONDFINAL.png" alt=""> -->
+
+
+    <video  controls class="homeAnimation"  >
+      <source src="./src/images/logo_regles.mp4" type="video/mp4" >
+    </video>
     <div class="congrats"></div>
     <div
       class="game__sprite vehicule__active vehicule"
@@ -85,6 +89,11 @@
       </ul>
       <span>Time Travel©</span>
     </div>
+
+
+<audio class="gameOverAudio" src="src/assets/audio/game-over-yeah-1_8hMpqz1K.mp3"></audio>
+<audio class="youWinAudio" src="src/assets/audio/You_Win_Voice_Sound_Effect.mp3"></audio>
+<audio loop class="youWinMusic" src="src/assets/audio/Epic_Win_-_Sound_Effect.mp3"></audio>
 
     <script type="module" src="/src/main.js"></script>
   </body>
