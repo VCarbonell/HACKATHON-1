@@ -1,7 +1,8 @@
 import { def } from "@vue/shared";
 
 const vehicule = document.querySelector('.vehicule__active');
-const drapeau = document.querySelector('.drapeau__correct');
+const drapeau = document.querySelectorAll('.drapeau__correct');
+console.log(drapeau);
 
 const getAllSquare = (myPos) => {
   const allSquareX = {
@@ -24,10 +25,12 @@ const hitDrapeau = (drapeau, vehicule) => {
 export const getPoint = () => {
   const vehiculePos = vehicule.getBoundingClientRect();
   const vehiculeSquare = getAllSquare(vehiculePos);
-  const drapeauPos = drapeau.getBoundingClientRect();
-  const drapeauSquare = getAllSquare(drapeauPos);
-  const point = hitDrapeau(drapeauSquare, vehiculeSquare);
-  return point;
+  drapeau.forEach(el => {
+    const drapeauPos = el.getBoundingClientRect();
+    const drapeauSquare = getAllSquare(drapeauPos);
+    const point = hitDrapeau(drapeauSquare, vehiculeSquare);
+    return point;
+    });
 };
 
 export default getPoint;
