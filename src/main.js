@@ -1,9 +1,9 @@
 import { gsap } from "gsap";
 import './style.scss';
+import './js/selection'
 import './obstacle.js'
 import './collision.js';
 import navigation from "./js/navigation";
-import './collision.js';
 
 const playBtn = document.querySelector('.playBtn');
 

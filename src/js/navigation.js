@@ -20,6 +20,8 @@ window.addEventListener('load', () => {
 let keysPressed = {};
 let number = 5;
 
+let alreadyHit = false;
+
 window.addEventListener('keydown', (e) => {
   keysPressed[e.key] = true;
   switch(true) {
@@ -63,13 +65,19 @@ window.addEventListener('keydown', (e) => {
       console.log("Let's go!!!");
   };
   const collision = getCollision();
-  if (collision === true) {
-    vehicule.style.left = 0;
-    vehicule.style.bottom = 0;
-    if (number > 0) {
+  if (collision === true && alreadyHit === false) {
+    vehicule.classList.add("blink");
+    alreadyHit = true;
+    setTimeout(() => {
+      vehicule.classList.remove("blink");
+      alreadyHit = false;
+    }, 1500);
+    if (number > 1) {
       number = number - 1;
       vies.style.backgroundImage = `url('./src/images/${number}vies.png')`;
     } else {
+      number = number - 1;
+      vies.style.backgroundImage = `url('./src/images/${number}vies.png')`;
       gameover.style.display = "block";
     }
   };

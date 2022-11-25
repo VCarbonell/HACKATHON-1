@@ -1,3 +1,16 @@
+@keyframes blinker {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.blink {
+  animation: blinker 300ms infinite;
+}
+
 .vehicule__active {
   width: auto;
   height: auto;
