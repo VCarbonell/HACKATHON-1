@@ -9,6 +9,11 @@ const accueilSound = document.querySelector('.accueilSound');
 const inGameSound = document.querySelector('.inGameSound');
 const buttonSound = document.querySelector('.buttonClickSound');
 const playBtn = document.querySelector('.playBtn');
+const youWinAudio = document.querySelector('.youWinAudio')
+const youWinMusic = document.querySelector('.youWinMusic')
+const homeAnimation = document.querySelector('.homeAnimation')
+
+
 
 accueilSound.play();
 
@@ -19,6 +24,11 @@ const bgTl = gsap.timeline();
    y:'10px',
    repeat:-1,
    yoyo:true
+ })
+ 
+ gsap.to(homeAnimation, {
+   display:'none',
+   delay:15,
  })
 
 const play = () => {
@@ -36,36 +46,23 @@ const play = () => {
 .to('.congrats',{
   opacity:1,
   duration:1,
-  y:'10%',
-
-  
+  y:'10%', 
 }, '=-.1')
+.add(()=>{
+  youWinAudio.play()
+},'<')
+.add(()=>{
+  youWinMusic.play()
+})
 .to('.credit', {
   delay:4,
-  y:'-1172px',
-  duration:10
+  y:'-2272px',
+  duration:22,
+  
 })
-// .to('.credit', {
-//   delay:4,
-//   y:'-3000px',
-//   duration:10
-// })
-
-
-
-
-
 }
 
-
-
-
 playBtn.addEventListener('click', play);
-
-
-
-
-
 
 navigation();
 

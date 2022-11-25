@@ -18,6 +18,9 @@ const windowWidth = window.innerWidth;
 const windowHeight = window.innerHeight;
 const explosion = document.querySelector('.explosion');
 const explosionSound = document.querySelector('.explosionSound');
+const gameOverAudio = document.querySelector('.gameOverAudio')
+const homeAnimation = document.querySelector('.homeAnimation')
+
 
 let moveBy = 30;
 
@@ -25,6 +28,8 @@ window.addEventListener('load', () => {
   vehicule.style.position = 'absolute';
   vehicule.style.left = "0px";
   vehicule.style.bottom = "350px";
+  homeAnimation.play()
+
 });
 
 let keysPressed = {};
@@ -95,6 +100,7 @@ window.addEventListener('keydown', (e) => {
       vehicule.classList.add("vehiculeDeath");
       explosionSound.play();
       gameover.style.display = "block";
+      gameOverAudio.play()
       bgTl.kill()
     }
   };
