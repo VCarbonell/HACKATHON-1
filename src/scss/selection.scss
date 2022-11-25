@@ -23,10 +23,14 @@
 .player {
   width: 32%;
   transition: transform 300ms ease-in-out;
+  cursor: pointer;
+
 }
 
 .selectBtn {
   width: 45%;
+  cursor: pointer;
+
 }
 
 .selectedPlayer {
