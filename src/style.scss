@@ -3,6 +3,8 @@
 @import 'scss/test.css';
 @import 'scss/navigation.scss';
 @import 'scss/selection.scss';
+@import url(//db.onlinewebfonts.com/c/bc1523d2e78d550ef9c38c497b092aa2?family=Naughty+Squirrel+Demo);
+
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -374,23 +376,27 @@ body{
 }
 .credit{
   position: absolute;
-  top: 2000px;
+  top: 750px;
   height: 100vh;
   width: 100vw;
   background-color: transparent;
   z-index: 900;
-  color: black;
+
   opacity: 1;
   text-align: center;
   transform: translate3d(0,0);
   &__title{
     font-size: 10rem;
-    color: rgb(20, 20, 19);
+    color: white;
+    text-shadow: 3px 3px 3px grey;
     text-decoration: none;
+    font-family: "Naughty Squirrel Demo" ;
 
   }
  li{
 font-size: 3rem;
+font-family: "Naughty Squirrel Demo" ;
+color: rgb(242, 119, 25);
 margin: 2rem 0
   }
   span{

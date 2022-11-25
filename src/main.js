@@ -35,7 +35,7 @@ const play = () => {
 }, '=-.1')
 .to('.credit', {
   delay:4,
-  y:'-3000px',
+  y:'-1172px',
   duration:10
 })
 // .to('.credit', {
