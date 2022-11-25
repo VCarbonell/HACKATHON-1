@@ -35,7 +35,6 @@ const play = () => {
     ease:'linear',
 
   })
-
 .to('.congrats',{
   opacity:1,
   duration:1,
