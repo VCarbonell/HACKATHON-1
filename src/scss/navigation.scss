@@ -1,0 +1,68 @@
+@keyframes blinker {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.blink {
+  animation: blinker 300ms infinite;
+}
+
+.vehicule__active {
+  width: auto;
+  height: auto;
+  transition: all 0.1s linear;
+  position: absolute;
+}
+
+.vehicule__next {
+  width: auto;
+  height: auto;
+  transition: all 0.1s linear;
+  position: absolute;
+  left: 500px;
+  top: 400px;
+}
+
+.level2__change {
+  position: absolute;
+  left: 4100px;
+  width: 55px;
+  height: 100vh;
+  z-index: 100;
+}
+
+.level3__change {
+  position: absolute;
+  left: 11952px;
+  width: 55px;
+  height: 100vh;
+  z-index: 100;
+}
+
+.level4__change {
+  position: absolute;
+  left: 20540px;
+  width: 55px;
+  height: 100vh;
+  z-index: 100;
+}
+
+.level5__change {
+  position: absolute;
+  left: 29120px;
+  width: 55px;
+  height: 100vh;
+  z-index: 100;
+}
+
+.level6__change {
+  position: absolute;
+  left: 39140px;
+  width: 55px;
+  height: 100vh;
+  z-index: 100;
+}

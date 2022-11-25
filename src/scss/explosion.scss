@@ -1,0 +1,59 @@
+@keyframes explosionAnimation {
+  17% {
+    background-image: url('./src/assets/Explosion/explosion2.png');
+    transform: scale(1.2);
+  }
+  34% {
+    background-image: url('./src/assets/Explosion/explosion3.png');
+    transform: scale(1.4);
+  }
+  51% {
+    background-image: url('./src/assets/Explosion/explosion4.png');
+    transform: scale(1.6);
+  }
+  68% {
+    background-image: url('./src/assets/Explosion/explosion5.png');
+    transform: scale(1.8);
+  }
+  85% {
+    background-image: url('./src/assets/Explosion/explosion6.png');
+  }
+  99% {
+    background-image: url('./src/assets/Explosion/explosion6.png');
+    transform: scale(2.4);
+  }
+  100% {
+    background-image: none;
+  }
+}
+
+@keyframes vehiculeDeathAnim {
+  from {
+    transform: translate(0px) rotate(0deg);
+  }
+  to {
+    transform: translate(700px, 1000px) rotate(90deg);
+  }
+}
+
+.vehicule {
+  display: flex;  
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.vehiculeDeath {
+  animation: vehiculeDeathAnim 3s 900ms forwards;
+}
+
+.explosionAnim {
+  animation: explosionAnimation 1s forwards;
+  background-image: url('./src/assets/Explosion/explosion1.png');
+  background-position: center;
+  background-size: cover;
+  z-index: 1000;
+  height: 100px;
+  width: 100px;
+  margin-bottom: 20px;
+}
+

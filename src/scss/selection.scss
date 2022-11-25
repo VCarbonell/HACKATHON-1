@@ -1,0 +1,49 @@
+@import url(//db.onlinewebfonts.com/c/bc1523d2e78d550ef9c38c497b092aa2?family=Naughty+Squirrel+Demo);
+
+.playerSelection {
+  position: absolute;
+  left: 0;
+  z-index: 1100;
+  width: 70vw;
+  height: 70vh;
+  margin-left: 15vw;
+  margin-top: 15vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.playerContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.player {
+  width: 32%;
+  transition: transform 300ms ease-in-out;
+  cursor: pointer;
+
+}
+
+.selectBtn {
+  width: 45%;
+  cursor: pointer;
+
+}
+
+.selectedPlayer {
+  position: absolute;
+  top: 15px;
+  right: 350px;
+  z-index: 1100;
+  font-family: "Naughty Squirrel Demo";
+  font-size: 60px;
+  color: white;
+  text-shadow: 2px 2px #860601, 4px 4px 1px #c14d32;
+}
+
+.isSelected {
+  transform: scale(1.1);
+}
