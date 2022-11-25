@@ -106,6 +106,8 @@ export const getFlagChoice = () => {
   }
   if (result) {
     return true;
-  }
+  } else if (result === false) {
   return false;
+  }
+  return null;
 };

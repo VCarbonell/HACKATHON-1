@@ -31,7 +31,6 @@ const play = () => {
     duration:80,
     delay:1,
     ease:'linear',
-
   })
 
 .to('.congrats',{
@@ -68,9 +67,8 @@ playBtn.addEventListener('click', play);
 
 
 
-
 navigation();
 
-export default bgTl
+export default bgTl;
 
 
