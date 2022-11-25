@@ -15,7 +15,6 @@ const homeAnimation = document.querySelector('.homeAnimation')
 
 
 
-accueilSound.play();
 
 const bgTl = gsap.timeline();
 

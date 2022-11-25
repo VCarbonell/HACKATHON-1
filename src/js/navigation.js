@@ -18,8 +18,11 @@ const windowWidth = window.innerWidth;
 const windowHeight = window.innerHeight;
 const explosion = document.querySelector('.explosion');
 const explosionSound = document.querySelector('.explosionSound');
-const gameOverAudio = document.querySelector('.gameOverAudio')
-const homeAnimation = document.querySelector('.homeAnimation')
+const gameOverAudio = document.querySelector('.gameOverAudio');
+const homeAnimation = document.querySelector('.homeAnimation');
+const accueilSound = document.querySelector('.accueilSound');
+const inGameSound = document.querySelector('.inGameSound');
+
 
 
 let moveBy = 30;
@@ -29,7 +32,9 @@ window.addEventListener('load', () => {
   vehicule.style.left = "0px";
   vehicule.style.bottom = "350px";
   homeAnimation.play()
-
+  setTimeout(() => {
+    accueilSound.play();
+  }, 6000);
 });
 
 let keysPressed = {};
@@ -96,11 +101,14 @@ window.addEventListener('keydown', (e) => {
     } else {
       number = number - 1;
       vies.style.backgroundImage = `url('./src/images/${number}vies.png')`;
+      inGameSound.pause();
       explosion.classList.add("explosionAnim");
       vehicule.classList.add("vehiculeDeath");
       explosionSound.play();
       gameover.style.display = "block";
-      gameOverAudio.play()
+      setTimeout(() => {
+        gameOverAudio.play()
+      }, 1500);
       bgTl.kill()
     }
   };
