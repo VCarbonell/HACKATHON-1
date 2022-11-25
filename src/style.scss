@@ -184,25 +184,28 @@ body{
 
 .drapeaux1{
   position: absolute;
-  top: 3rem;
+  top: 0;
   left: 10500px;
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 49vh;
   background-size: cover;
   z-index: 300;
   background-image: url('src/images/mexicoDrapeaux.png');
   background-size: contain;
-
+  background-position: center;
+  background-repeat: no-repeat;
 }
 .drapeaux2{
   position: absolute;
-  top: 20rem;
+  bottom: 0;
   left: 10500px;
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 49vh;
   align-self: flex-end;
   background-image: url('src/images/nigerDrapeaux.png');
+  background-position: center;
   background-size: contain;
+  background-repeat: no-repeat;
   z-index: 300;
 }
 .monumentA{

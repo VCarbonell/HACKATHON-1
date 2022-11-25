@@ -1,4 +1,5 @@
 import { getCollision } from "../collision";
+import { getFlagChoice } from "../collision";
 import { changeVeh } from "./changeVeh";
 import { getPoint } from "./getPoint";
 import bgTl from '../main';
@@ -25,6 +26,7 @@ let number = 5;
 let pointCount = 0;
 
 let alreadyHit = false;
+let alreadyHitFlag = false;
 
 window.addEventListener('keydown', (e) => {
   keysPressed[e.key] = true;
@@ -87,6 +89,16 @@ window.addEventListener('keydown', (e) => {
 
     }
   };
+
+  const flag = getFlagChoice();
+  if (flag && !alreadyHitFlag) {
+    alreadyHitFlag = true;
+    setTimeout(() => {
+      alreadyHitFlag = false;
+    }, 1500)
+    pointCount += 1;
+    points.style.backgroundImage = `url('./src/images/${pointCount}point.png')`;
+  }
 
   const { change2, change3, change4, change5, change6 } = changeVeh();
   if (change2 === true) {
