@@ -1,6 +1,7 @@
 import { getCollision } from "../collision";
 import { changeVeh } from "./changeVeh";
 import { getPoint } from "./getPoint";
+import bgTl from '../main';
 
 const navigation = () => {
 const vehicule = document.querySelector('.vehicule__active');
@@ -82,6 +83,8 @@ window.addEventListener('keydown', (e) => {
       number = number - 1;
       vies.style.backgroundImage = `url('./src/images/${number}vies.png')`;
       gameover.style.display = "block";
+      bgTl.kill()
+
     }
   };
 
