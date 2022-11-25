@@ -15,6 +15,7 @@ const bgTl = gsap.timeline();
    repeat:-1,
    yoyo:true
  })
+
 const play = () => {
   playBtn.style.display = "none";
   bgTl.to('.game', {
@@ -25,39 +26,19 @@ const play = () => {
 
   })
 
-
-
-  
-//   .to('.game', {
-//     x:'-6%',
-//     duration:10,
-//     ease:'linear',
-//   },'<')
-//   .to('.game', {
-//   x:'-15%',
-//   delay:0,
-//   duration:15,
-//   ease:'linear',
-// }, '<')
-// .to('.game', {
-//   x:'-35%',
-//   duration:15,
-//   ease:'linear',
-
-// }, '<')
-// .to('.game', {
-//   x:'-45%',
-//   duration:15,
-//   ease:'linear',
-  
-
-
-// }, '<')
 .to('.congrats',{
-  opacity:0.5,
+  opacity:1,
+  duration:1,
+  y:'10%',
   onComplete : () =>{
-    bgTl.kill()
+    bgTl.pause()
   }
+  
+}, '=-.1')
+.to('.credit', {
+  delay:4,
+  y:'-3000px',
+  duration:10
 })
 
 
@@ -68,6 +49,7 @@ const play = () => {
 
 
 
+
 playBtn.addEventListener('click', play);
 
 
@@ -75,4 +57,9 @@ playBtn.addEventListener('click', play);
 
 
 
+
 navigation();
+
+export default bgTl
+
+
